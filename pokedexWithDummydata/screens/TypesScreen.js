@@ -6,11 +6,13 @@ export default function TypesScreen({navigation}){
   function renderMe(itemData){
 
     function goToAllPokemonPage(){
-      alert("Pressed")
+      navigation.navigate("AllPokemon", {
+        pokeType: type
+      })
     }
 
     const {type, color} = itemData.item
-    return <TextOnlyCard type={type} pressMe={goToAllPokemonPage} color={color} />
+    return <TextOnlyCard type={type} color={color} pressMe={goToAllPokemonPage}  />
   }
 
   return(
