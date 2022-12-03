@@ -14,8 +14,8 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='AllPokemon' component={AllPokemonScreen} />
-          <Stack.Screen name='SpecificPokemon' component={IndPokemonScreen} />
+          <Stack.Screen name='AllPokemon' component={AllPokemonScreen} options={{title: "All Pokemon"}}/>
+          <Stack.Screen name='SpecificPokemon' component={IndPokemonScreen} options={({route}) => ({title: route.params.pokeName})}/>
         </Stack.Navigator>
       </NavigationContainer>
       

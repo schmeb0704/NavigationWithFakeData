@@ -7,14 +7,16 @@ export default function Card(props){
       <Pressable 
         onPress={pressMe}
       >
-        <View>
-          <Text style={styles.name}>{name}</Text>
-        </View>
-        <View style={styles.imageHolder}>
-          <Image 
-            source={{uri: image}}
-            style={styles.image}
-          />
+        <View style={styles.details}>
+          <View>
+            <Text style={styles.name}>{name}</Text>
+          </View>
+          <View style={styles.imageHolder}>
+            <Image 
+              source={{uri: image}}
+              style={styles.image}
+            />
+          </View>
         </View>
       </Pressable>
     </View>
@@ -32,12 +34,14 @@ const styles = StyleSheet.create({
     resizeMode: "contain"
   }, 
   container:{
-    alignItems: "center",
     flex: 1,
     margin: 16,
     height: 150,
   },
   name:{
     textTransform: "capitalize"
+  }, 
+  details:{
+    alignItems: "center"
   }
 })
