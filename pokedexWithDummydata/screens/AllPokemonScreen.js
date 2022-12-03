@@ -21,10 +21,11 @@ export default function AllPokemonScreen({navigation, route}){
     return typeId === Pokemon.type
   }
 
-  const specType = POKEDATA.filter(checkType)
+  const specType = POKEDATA.filter((pokemon)=> typeId === pokemon.type)
 
   console.log(typeId)
   console.log(specType)
+  console.log(POKEDATA)
 
   
   return(
